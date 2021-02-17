@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const express = require("express");
 const exphbs = require("express-handlebars");
 const routes = require("./controllers/burgersController.js")
@@ -18,3 +19,8 @@ app.use(routes);
 app.listen(PORT, function(){
     console.log("Server listening on: http://localhost:" + PORT);
 });
+=======
+const express = require("express");
+const exphbs = require("express-handlebars");
+const routes = require("./")
+>>>>>>> 54b076fa24e677c3112a8afd40e29f17f1822bd9
