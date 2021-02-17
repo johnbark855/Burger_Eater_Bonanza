@@ -1,0 +1,52 @@
+<style media="screen">
+    ul {
+        font-family: sans-serif;
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 80%;
+        list-style: none;
+    }
+</style>
+
+<h1>I must consume burgers!</h1>
+<br><br>
+<div class = "container">
+<div class = "row justify-content-md-center">
+    <div class = "col-5"></div>
+    <h5>Fresh off the grill burgers</h5>
+    <ul>
+   {{#each burgers}}
+                {{#unless devoured}}
+                {{>burgers-list devoured=false}}
+                {{/unless}}
+                {{/each}}
+    </ul>
+</div>
+   <div class="col-3">
+            <h4>Consumed Burgers</h4>
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                <del>
+                {{>burgers-list devoured=true}}
+                </del>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+<br>
+
+<form id="create-form" action="/api/burgers" method="POST">
+
+    <div class="form-group">
+        <input type="text" name="burger_name">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-light">Submit</button>
+</form>
+
+<br><br>
+<p> Enter a burger you want to consume, then click the "Submit" button</p>
+</div>

@@ -1,0 +1,25 @@
+{
+  "name": "burger_eater_bonanza",
+  "version": "1.0.0",
+  "description": "Burger eater application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnbark855/Burger_Eater_Bonanza.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnbark855/Burger_Eater_Bonanza/issues"
+  },
+  "homepage": "https://github.com/johnbark855/Burger_Eater_Bonanza#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "handlebars": "^4.7.6",
+    "mysql": "^2.18.1"
+  }
+}
