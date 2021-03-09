@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const express = require("express");
 const exphbs = require("express-handlebars");
 const routes = require("./controllers/burgersController.js")
@@ -6,21 +6,20 @@ const routes = require("./controllers/burgersController.js")
 const PORT = process.env.PORT || 8080;
 const app = express();
 
+
 app.use(express.static('public'));
 
-app.use(express.urlencoded({extended: true }));
+
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+
+app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
+
 
 app.use(routes);
 
-app.listen(PORT, function(){
+app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);
 });
-=======
-const express = require("express");
-const exphbs = require("express-handlebars");
-const routes = require("./")
->>>>>>> 54b076fa24e677c3112a8afd40e29f17f1822bd9
