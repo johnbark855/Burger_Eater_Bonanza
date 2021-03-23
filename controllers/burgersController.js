@@ -4,12 +4,12 @@ const router = express.Router();
 const burger = require("../models/burger.js");
 
 router.get("/", (req, res) => {
-    burger.all((data) => {
+    burger.allburger((data) => {
         const hbsObject = {
             burgers: data,
         };
         console.log("hbsObject", hbsObject);
-        res.render('index, hbsObject');
+        res.render('index', hbsObject);
     });
 });
 
@@ -17,7 +17,7 @@ router.post('/api/burgers', (req, res) => {
     const condition = 'id = $req.params.id}';
     console.log("condition", condition)
 
-    burger.update(
+    burger.updateburger(
         {
             devoured: req.body.devoured,
         },

@@ -1,14 +1,14 @@
-const orm = ("../config/orm.js");
+const orm = require("../config/orm.js");
 
 const burger = {
-    all(cb) {
+    allburger:(cb)=> {
         orm.all("burgers", (res) => cb(res));
     },
-    create(cols, vals, cb) {
+    createburger:(cols, vals, cb)=> {
         orm.create("burgers", cols, vals, (res) => cb(res));
     },
 
-    update(objColVals, condition, cb) {
+    updateburger:(objColVals, condition, cb)=> {
         orm.update("burgers", objColVals, condition, (res) => cb(res));
     },
 };

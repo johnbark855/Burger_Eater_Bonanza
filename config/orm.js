@@ -37,7 +37,7 @@ const printQuestionMarks = (num) => {
   
 
   const orm = {
-    all(tableInput, cb) {
+    all: (tableInput, cb)=> {
       const queryString = `SELECT * FROM ${tableInput};`;
       connection.query(queryString, (err, result) => {
         if (err) {
@@ -46,7 +46,7 @@ const printQuestionMarks = (num) => {
         cb(result);
       });
     },
-    create(table, cols, vals, cb) {
+    create:(table, cols, vals, cb)=> {
       let queryString = `INSERT INTO ${table}`;
   
       queryString += ' (';
@@ -66,7 +66,7 @@ const printQuestionMarks = (num) => {
         cb(result);
       });
     },
-   update(table, objColVals, condition, cb) {
+   update:(table, objColVals, condition, cb)=> {
       let queryString = `UPDATE ${table}`;
   
       queryString += ' SET ';
